@@ -12,9 +12,10 @@ namespace EmpWageProblem
         {
             EmpCheck empcheck = new EmpCheck();
             EmpCheck.Attendance();
+            
+            DailyWage empcheckk = new DailyWage();
+            DailyWage.EmpWage();
             Console.ReadLine();
-
-
 
 
 
