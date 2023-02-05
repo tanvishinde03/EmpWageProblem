@@ -15,6 +15,9 @@ namespace EmpWageProblem
             
             DailyWage empcheckk = new DailyWage();
             DailyWage.EmpWage();
+
+            PartTime empcheckkk = new PartTime();
+            PartTime.EmpWagePart();
             Console.ReadLine();
 
 
