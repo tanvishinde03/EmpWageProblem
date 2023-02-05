@@ -20,8 +20,8 @@ namespace EmpWageProblem
             PartTime.EmpWagePart();
             Console.ReadLine();
 
-
-
+            Switchcase emppcheck = new Switchcase();
+            Switchcase.SwitchCase();
         }
     }
 }
