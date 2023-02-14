@@ -30,7 +30,11 @@ namespace EmpWageProblem
             MonthlyWage.EmployeeMonthlyWage();
             Console.ReadLine();
 
+            HoursDaysTotal Obj = new HoursDaysTotal();
+            HoursDaysTotal.DaysHoursOfMonth();
+            Console.ReadLine();
+
 
         }
-    }
+}
 }
