@@ -45,8 +45,13 @@ namespace EmpWageProblem
             MultipleCompanies.ComputeWage("ZARA", 40, 20, 60);
             Console.ReadLine();
 
-
-
+            SaveTotalWage Empp = new SaveTotalWage ("ZARA", 20, 2, 10);
+            SaveTotalWage Emp  = new SaveTotalWage("HNM", 10, 4, 20);
+            Empp.EmpWage();
+            Console.WriteLine(Empp.ToString());
+            Emp.EmpWage();
+            Console.WriteLine(Emp.ToString());
+            Console.ReadKey();
         }
 
 
