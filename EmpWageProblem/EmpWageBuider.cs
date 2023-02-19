@@ -11,31 +11,30 @@ namespace EmpWageProblem
         public const int IS_PART_TIME = 1;
         public const int IS_FULL_TIME = 2;
 
-        private int numOfCompany = 0;
-        private EmployeeModelClass[] EmployeeModelClassArray;
+        private List<EmployeeModelClass> companyEmpWageList;
 
         public EmpWagebuider()
         {
-            this.EmployeeModelClassArray = new EmployeeModelClass[5];
+            this.companyEmpWageList = new List<EmployeeModelClass>();
         }
         public void AddCompanyEmpWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
         {
-            EmployeeModelClassArray[this.numOfCompany] = new EmployeeModelClass(company, empRatePerHour, numOfWorkingDays, maxHoursPerMonth);
-            numOfCompany++;
+            EmployeeModelClass  company2 = new EmployeeModelClass(company, empRatePerHour, numOfWorkingDays, maxHoursPerMonth);
+            companyEmpWageList.Add(company2);
         }
         public void ComputeEmpWage()
         {
-            for (int i = 0; i < numOfCompany; i++)
+            foreach (var EmpWage in companyEmpWageList)
             {
-                EmployeeModelClassArray[i].SetTotalEmpWage(this.ComputeEmpWage(this.EmployeeModelClassArray[i]));
-                Console.WriteLine(this.EmployeeModelClassArray[i].ToString());
+                EmpWage.SetTotalEmpWage(ComputeEmpWage(EmpWage));
+                Console.WriteLine(EmpWage.ToString());
             }
         }
-        public int ComputeEmpWage(EmployeeModelClass companyWages)
+        public int ComputeEmpWage(EmployeeModelClass companyEmpWage)
         {
 
             int empHrs = 0, totalEmpHrs = 0, totalWorkingDays = 0;
-            while (totalEmpHrs <= companyWages.maxHoursPerMonth && totalWorkingDays < companyWages.numOfWorkingDays)
+            while (totalEmpHrs <= companyEmpWage.maxHoursPerMonth && totalWorkingDays < companyEmpWage.numOfWorkingDays)
             {
                 totalWorkingDays++;
                 Random random = new Random();
@@ -55,17 +54,11 @@ namespace EmpWageProblem
                 totalEmpHrs += empHrs;
                 Console.WriteLine("Day#" + totalWorkingDays + " Emp Hrs: " + empHrs);
             }
-            return totalEmpHrs * companyWages.empRatePerHour;
+            return totalEmpHrs * companyEmpWage.empRatePerHour;
         }
     }
 
 }
-
-
-
-
-
-
 
 
 

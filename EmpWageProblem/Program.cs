@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace EmpWageProblem
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-
-
             EmpCheck empcheck = new EmpCheck();
             EmpCheck.Attendance();
             Console.ReadLine();
@@ -59,10 +57,7 @@ namespace EmpWageProblem
             objj.ComputeEmpWage();
             Console.ReadKey();
 
-
         }
-
-
     }
 }
     
