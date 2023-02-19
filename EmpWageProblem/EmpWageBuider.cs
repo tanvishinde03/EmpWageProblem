@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmpWageProblem
 {
-    public class ManageEmpWage
+    public class EmpWagebuider : EmpWageInterface
     {
         public const int IS_PART_TIME = 1;
         public const int IS_FULL_TIME = 2;
@@ -14,13 +14,13 @@ namespace EmpWageProblem
         private int numOfCompany = 0;
         private EmployeeModelClass[] EmployeeModelClassArray;
 
-        public ManageEmpWage()
+        public EmpWagebuider()
         {
             this.EmployeeModelClassArray = new EmployeeModelClass[5];
         }
-        public void AddCompanyEmpWage(string company, int empRatePerHour, int numofWorkingDays, int maxHoursPerMonth)
+        public void AddCompanyEmpWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
         {
-            EmployeeModelClassArray[this.numOfCompany] = new EmployeeModelClass(company, empRatePerHour, numofWorkingDays, maxHoursPerMonth);
+            EmployeeModelClassArray[this.numOfCompany] = new EmployeeModelClass(company, empRatePerHour, numOfWorkingDays, maxHoursPerMonth);
             numOfCompany++;
         }
         public void ComputeEmpWage()
@@ -31,11 +31,11 @@ namespace EmpWageProblem
                 Console.WriteLine(this.EmployeeModelClassArray[i].ToString());
             }
         }
-        public int ComputeEmpWage(EmployeeModelClass companyEmpWage)
+        public int ComputeEmpWage(EmployeeModelClass companyWages)
         {
 
             int empHrs = 0, totalEmpHrs = 0, totalWorkingDays = 0;
-            while (totalEmpHrs <= companyEmpWage.maxHoursPerMonth && totalWorkingDays < companyEmpWage.numOfWorkingDays)
+            while (totalEmpHrs <= companyWages.maxHoursPerMonth && totalWorkingDays < companyWages.numOfWorkingDays)
             {
                 totalWorkingDays++;
                 Random random = new Random();
@@ -55,7 +55,7 @@ namespace EmpWageProblem
                 totalEmpHrs += empHrs;
                 Console.WriteLine("Day#" + totalWorkingDays + " Emp Hrs: " + empHrs);
             }
-            return totalEmpHrs * companyEmpWage.empRatePerHour;
+            return totalEmpHrs * companyWages.empRatePerHour;
         }
     }
 

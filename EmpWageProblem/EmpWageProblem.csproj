@@ -46,8 +46,9 @@
     <Compile Include="DailyWage.cs" />
     <Compile Include="EmpCheck.cs" />
     <Compile Include="EmployeeModelClass.cs" />
+    <Compile Include="EmpWageInterface.cs" />
     <Compile Include="HoursDaysTotal.cs" />
-    <Compile Include="ManageEmpWage.cs" />
+    <Compile Include="EmpWageBuider.cs" />
     <Compile Include="MonthlyWage.cs" />
     <Compile Include="MultipleCompanies.cs" />
     <Compile Include="PartTime.cs" />

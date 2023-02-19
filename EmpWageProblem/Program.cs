@@ -53,8 +53,8 @@ namespace EmpWageProblem
             Console.WriteLine(Emp.ToString());
             Console.ReadKey();
 
-            ManageEmpWage objj = new ManageEmpWage();
-            objj.AddCompanyEmpWage("ZARA", 20, 2, 10);              //UC10
+            EmpWagebuider objj = new EmpWagebuider();
+            objj.AddCompanyEmpWage("ZARA", 20, 2, 10);              
             objj.AddCompanyEmpWage("HNM", 10, 4, 20);
             objj.ComputeEmpWage();
             Console.ReadKey();
