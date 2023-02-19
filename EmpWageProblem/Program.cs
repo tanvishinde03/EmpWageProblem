@@ -46,12 +46,20 @@ namespace EmpWageProblem
             Console.ReadLine();
 
             SaveTotalWage Empp = new SaveTotalWage ("ZARA", 20, 2, 10);
-            SaveTotalWage Emp  = new SaveTotalWage("HNM", 10, 4, 20);
+            SaveTotalWage Emp  = new SaveTotalWage("HNM", 10, 4, 20);       //UC9
             Empp.EmpWage();
             Console.WriteLine(Empp.ToString());
             Emp.EmpWage();
             Console.WriteLine(Emp.ToString());
             Console.ReadKey();
+
+            ManageEmpWage objj = new ManageEmpWage();
+            objj.AddCompanyEmpWage("ZARA", 20, 2, 10);              //UC10
+            objj.AddCompanyEmpWage("HNM", 10, 4, 20);
+            objj.ComputeEmpWage();
+            Console.ReadKey();
+
+
         }
 
 

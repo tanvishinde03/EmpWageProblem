@@ -14,12 +14,14 @@ namespace EmpWageProblem
         private int MONTHLY_WORKING_DAYS;
         private int EMP_WAGE_PER_HR;
         private int totalEmpWage;
+       
         public SaveTotalWage(string company, int MAX_WORKING_HRS, int MONTHLY_WORKING_DAYS, int EMP_WAGE_PER_HR)
         {
             this.company = company;
             this.MAX_WORKING_HRS = MAX_WORKING_HRS;
             this.MONTHLY_WORKING_DAYS = MONTHLY_WORKING_DAYS;
             this.EMP_WAGE_PER_HR = EMP_WAGE_PER_HR;
+           
         }
         public void EmpWage()
         {
